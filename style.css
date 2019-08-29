@@ -2324,6 +2324,56 @@ option {
   overflow: auto;
 
 }
+#tr_tppSec{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: radial-gradient(circle at 0 0, #050516, #111132);
+  z-index:2 ;
+}
+.tr_topBG_imgWraper {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  max-width: 85%;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+.tr_top_img img{
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+}
+.tr_top_img{
+  text-align: center;
+  margin: auto 5px;
+}
+.tr_top_img.img5{
+  text-align:left;
+}
+.tr_top_img.img4 , .tr_top_img.img2{
+  max-width: 10%;
+}
+.tr_top_img.img1{
+  max-width: 15%;
+}
+.tr_top_img.img5{
+  max-width: 30%;
+}
+.tr_top_content{
+  text-align: center;
+  position: relative;
+  width:100%;
+}
+
+
+
+
+
 
 
 
