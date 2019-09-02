@@ -1,9 +1,6 @@
 <?php
-
 /**
-
  * Template Name: Tour
-
  */
  get_header() ?>
 <div class='main_wraper'> 
@@ -40,27 +37,59 @@
             </h1>
         </div>
         <div class='tr_sec2_Slider'>
+            <?php if( have_rows('slider__department') ): 
+                while ( have_rows('slider__department') ) : the_row();
+            ?>
             <div class='tr_tr_sec2_SlideItem'>
                 <div class='sec2SlideItemWraper'>
                     <div class='trS2Sld_top'>
-                        <div class='trS2Sld_top_left' style='background-image:url()'></div>
+                        <div class='trS2Sld_top_left' style="background-image:url('<?php echo  get_sub_field('trS2Sldtop_left_image');?>')"></div>
                         <div class='trS2Sld_top_right'>
-                            <div clas='trS2Sld_top_right_text'></div>
+                            <div class='trS2Sld_top_right_text'><?php the_sub_field('trS2Sld_top_rigt_text');?></div>
                         </div>
                     </div>
                     <div class='trS2Sld_bottom'>
-                        <div class='trS2Sld_top_left'>
-                            <div class='trS2Sld_bottom_left_text'></div>
+                        <div class='trS2Sld_bottom_left'>
+                            <div class='trS2Sld_bottom_left_text'><?php the_sub_field('trS2Sld_bottom_left_text');?></div>
                          </div>
                         <div class='trS2Sld_bottom_right'>
-                            <div class='trS2Sld_bottom_right_img'></div>
-                            <div class='trS2Sld_bottom_right_text'></div>
+                            <div class='trS2Sld_bottom_right_img' style="background-image:url('<?php echo  get_sub_field('trS2Sld_bottom_right_image');?>')"></div>
+                            <div class='trS2Sld_bottom_right_text'><?php the_sub_field('trS2Sld_bottom_right_text');?></div>
                          </div>
                     </div>
                 </div>
 
             </div>
+            <?php  endwhile;
+            endif; ?>
         </div>
+    </section>
+    <section id='tr_sec3'>
+            <div class='tr_sec3_left'>
+                <div class='tr_sec3_left_top'>
+                    <div class='tr_sec3_left_top1'>
+                        <div class='tr_sec3_left_top1_text1'><?php the_field('image_sec_top_left_text_1');?></div>
+                        <div class='tr_sec3_left_top1_text2'><?php the_field('image_sec_top_left_text_2');?></div>
+                    </div>
+
+                    <div class='tr_sec3_left_top2'>
+                        <div class='tr_sec3_left_top2_text'><?php the_field('image_sec_top_left_text_3');?></div>
+                        <div class='tr_sec3_left_top2_img'>
+                            <img src='<?php echo the_field('image_sec_top_image_1');?>'> 
+                        </div>
+                    </div>
+
+                    <div class='tr_sec3_left_top3'>
+                        <img src='<?php echo the_field('image_sec_top_image_2');?>'> 
+                    </div>
+                    <div class='tr_sec3_left_top4'>
+                        <img src='<?php echo the_field('image_sec_top_image_3');?>'> 
+                    </div>
+                       
+                </div>
+                <div class='tr_sec3_left_bottom'></div>
+            </div>
+            <div class='tr_sec3_right'></div>
     </section>
 </div>
 
