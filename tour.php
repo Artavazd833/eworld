@@ -71,10 +71,9 @@
                         <div class='tr_sec3_left_top1_text1'><?php the_field('image_sec_top_left_text_1');?></div>
                         <div class='tr_sec3_left_top1_text2'><?php the_field('image_sec_top_left_text_2');?></div>
                     </div>
-
+                    <div class='tr_sec3_left_top2_text'><?php the_field('image_sec_top_left_text_3');?></div>
                     <div class='tr_sec3_left_top2'>
-                        <div class='tr_sec3_left_top2_text'><?php the_field('image_sec_top_left_text_3');?></div>
-                        <div class='tr_sec3_left_top2_img'>
+                        <div class='tr_sec3_left_top2_img' >
                             <img src='<?php echo the_field('image_sec_top_image_1');?>'> 
                         </div>
                     </div>
@@ -87,9 +86,81 @@
                     </div>
                        
                 </div>
-                <div class='tr_sec3_left_bottom'></div>
+                <div class='tr_sec3_left_bottom'>
+                    <div class='gridLeft'>
+                        <div class='tr_sec3_left_bottom1'>
+                            <img src='<?php echo the_field('lb_image_1_large_image');?>'> 
+                        </div>
+                        <div class='tr_sec3_left_bottom2'  style="background-image:url('<?php echo  the_field('lb_image_1_large_image_copy');?>')"></div>
+                    </div>
+                    <div class='gridRigt'>
+                        <div class='tr_sec3_left_bottom3'>
+                            <img src='<?php echo the_field('lb_image_1_large_image_3');?>'> 
+                        </div>
+                        <div class='tr_sec3_left_bottom4'>
+                            <img src='<?php echo the_field('lb_image_1_large_image_4');?>'> 
+                        </div>
+                        <div class='tr_sec3_left_bottom5'>
+                            <div class='tr_sec3_left_bottom5_text'><?php the_field('left_bottom_text5');?></div>
+                        </div>
+                        <div class='tr_sec3_left_bottom6'style="background-image:url('<?php echo  the_field('lb_image_1_large_image_5');?>')"></div>
+                    </div>
+                </div>
+
             </div>
-            <div class='tr_sec3_right'></div>
+            <div class='tr_sec3_right'>
+                <div class='tr_sec3_right_Left'>
+                  <div class='tr_sec3_right_Left1'><?php the_field('image_sec_sec_rl1_text');?></div> 
+                  <div class='tr_sec3_right_Left2'style="background-image:url('<?php echo  the_field('image_sec_right_l1_img1');?>')" ></div>
+                  <div class='tr_sec3_right_Left3'>
+                    <img src='<?php echo the_field('image_sec_right_l1_img2');?>'>    
+                  </div> 
+                </div>
+                <div class='tr_sec3_right_Right'>
+                    <div class='tr_sec3_right_Right1' style="background-image:url('<?php echo  the_field('lb_image_1_large_image_copy');?>')">
+                        <?php the_field('image_sec_right_l1_topr1');?>
+                    </div>
+                    <div class='tr_sec3_right_Right2'>
+                        <img src='<?php echo the_field('image_sec_right_r_img_limage');?>'>
+                    </div>
+                    <div class='tr_sec3_right_Right3'>
+                        <?php the_field('image_sec_right_r_middle_text_big_texrt');?>
+                    </div>
+                    <div class='tr_sec3_right_Right4'>
+                        <div class='tr_sec3_right_Right41'><img src='<?php echo the_field('image_sec_right_r_img_bottomSmoll');?>'> </div>
+                        <div class='tr_sec3_right_Right42'><?php the_field('image_sec_right_r_bottomSmlText');?></div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id='tr_sec4'>
+            <div class='tr_sec4_title'><?php the_field('section4__top_title');?></div>
+            <div class='tr_sec4_slide'>
+                <?php if( have_rows('section_4_slider_departments') ): 
+                    while ( have_rows('section_4_slider_departments') ) : the_row();
+                ?>
+                    <div class='tr_sec4SlideItem'>
+                        <img src='<?php echo get_sub_field('department_image');?>'>
+                    </div>
+                <?php  endwhile;
+                endif; ?>
+            </div>
+            <div class='tr_sec4_cta'>
+                <div class='tr_sec4_ctaImg'>
+                    <img src='<?php echo the_field('section4_icon');?>'>
+                </div>
+            </div>
+            <div class='tr_sec4_ctaText'><?php the_field('image_sec_right_r_bottomSmlText');?></div>
+            <div class='tr_sec4_ctaLink'>
+                <?php 
+                    $link = get_field('section_4_join_button');
+                    if( $link ): 
+                        $link_url = $link['url'];
+                        $link_title = $link['title'];
+                        $link_target = $link['target'] ? $link['target'] : '_self';?>
+                        <a class="button" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                <?php endif; ?>
+            </div>
     </section>
 </div>
 
