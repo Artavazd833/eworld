@@ -149,9 +149,8 @@
                 <div class='tr_sec4_ctaImg'>
                     <img src='<?php echo the_field('section4_icon');?>'>
                 </div>
-            </div>
-            <div class='tr_sec4_ctaText'><?php the_field('image_sec_right_r_bottomSmlText');?></div>
-            <div class='tr_sec4_ctaLink'>
+                <div class='tr_sec4_ctaText'><?php the_field('section4__top_title_copy');?></div>
+                <div class='tr_sec4_ctaLink'>
                 <?php 
                     $link = get_field('section_4_join_button');
                     if( $link ): 
@@ -161,7 +160,10 @@
                         <a class="button" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                 <?php endif; ?>
             </div>
+            </div>
+               
     </section>
+    <div id='scroll_bar'><div>scroll<span></span></div></div>
 </div>
 
 <?php get_footer() ?>

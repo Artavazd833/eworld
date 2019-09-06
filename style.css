@@ -1774,7 +1774,6 @@ textarea {
 .hvideo_container, .hidden {
 
    display:none;
-
 }
 
 .hvideo_container.video_open{
@@ -1798,9 +1797,9 @@ textarea {
   width:100%;
 
   max-width: 820px;
-
+  -webkit-transition: .6s ease-out;
+    transition: .6s ease-out;
 }
-
 .iframe_wraper {
 
   position: relative;
@@ -1854,14 +1853,34 @@ textarea {
   z-index: 1;
 
   background: rgba(0,0,0,0.8);
-
 }
 
 .fullVideo{
-
   flex: 100%;
-
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 30%;
+  margin: auto;
+  background: rgba(0,0,0,0.8);
 }
+#hvide_close{
+  color: #fff;
+  font-size: 28px;
+  margin-right: -6%;
+  margin-top: -5%;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 0 6px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+}
+
 #scroll_bar{
   position: fixed;
   bottom:0;
@@ -2313,6 +2332,7 @@ option {
   background-color:#fff;
   position: relative;
   z-index: 2;
+  margin-bottom: 33rem;
 }
 #tr_tppSec{
   width: 100%;
@@ -3382,11 +3402,147 @@ cursor:url("/wp-content/themes/e-world/assets/images/cursor.svg"), default;
   background-position: center center;
 }
 
-
-
-
-
-
+#tr_sec4{
+width: 100%;
+padding: 3rem 0;
+}
+.tr_sec4_title {
+  font-family: 'HelveticaNowDisplay';
+  font-size: 55px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.22;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: #0c0821;
+  padding-top: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: -3rem;
+  position: relative;
+  z-index: 1;
+}
+.tr_sec4_slide{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.tr_sec4_slide img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 675px;
+}
+.tr_sec4_cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 1;
+}
+.tr_sec4_ctaImg img{
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+}
+.tr_sec4_ctaImg{
+  max-width: 70px;
+  text-align: center;
+}
+.tr_sec4_ctaText{
+    font-family: 'HelveticaNowDisplay';
+    font-size: 35px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.26;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #423e52;
+    text-transform: uppercase;
+}
+.tr_sec4_ctaLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 199px;
+  height: 63px;
+  border: solid 3px #efb10d;
+}
+.tr_sec4_ctaLink a{
+  font-family:'HelveticaNowDisplay';
+  font-size: 23px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.22;
+  letter-spacing: 0.46px;
+  text-align: center;
+  color: #efb10d;
+  text-decoration: none;
+  -webkit-transition: .6s ease-out;
+  transition: .6s ease-out;
+}
+.tr_sec4_ctaLink a:focus, .tr_sec4_ctaLink a:active , .lSSlideOuter .lSPager.lSpg a:focus, .lSSlideOuter .lSPager.lSpg a:active {
+  outline: none;
+}
+.tr_sec4_ctaLink:hover{
+  background-color: #efb10d;
+  color:#fff;
+}
+.tr_sec4_ctaLink:hover a{
+  color:#fff;
+}
+#tr_sec4 .lSSlideOuter .lSPager.lSpg {
+  bottom: 20rem;
+}
+/* Join Us Page */
+.jn_main{
+  width: 100%;
+  margin-bottom: 33rem;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+}
+#top_sec{
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  justify-content:center;
+  align-items: flex-end;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.jn_top_title{
+  font-family:'HelveticaNowDisplay';
+  font-size: 17.5vw;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.71;
+  letter-spacing: 6.74px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.jn_sec2_title{
+    max-width: 945px;
+    font-family: 'HelveticaNowDisplay';
+    font-size: 48px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: 0.96px;
+    text-align: center;
+    color: #07071d;
+    padding: 3rem 0;
+    margin: auto;
+    text-transform: uppercase;
+  }
 
 
 
