@@ -25,12 +25,12 @@
          </div>
 
       </div>
-
+ <span class='spitak'></span>
    </section>
 
 
 
-   <section id="home_sec2">
+   <section id="home_sec2" >
 
       <div class='sec2_title title'>
 
@@ -149,12 +149,12 @@
          </div>
 
       </div>
-
+      <span class='sev'></span>
    </section>
 
 
 
-   <section id="home_sec3">
+   <section id="home_sec3" class='spitak'>
 
       <div class='sec3_container'>
 
@@ -211,12 +211,12 @@
          </div>
 
       </div>
-
+      <span class='spitak'></span>
    </section>
 
 
 
-   <section id="home_sec4">
+   <section id="home_sec4" >
             <div class='sec4_container'>
                   <div class='sec4_top'>
                      <div class='sec4_top_left'>
@@ -247,9 +247,10 @@
                      endif; ?>
                      </div>
             </div>
+            <span class='sev'></span>
    </section>
 
-   <section id="home_sec5">
+   <section id="home_sec5" >
 
       <div class='hsec5_container'>
 
@@ -293,8 +294,8 @@
 
       </div>
 
-            
-
+      <span class='sev'></span>        
+   
    </section>
 
 </div>

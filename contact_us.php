@@ -3,7 +3,6 @@
 /**
 
  * Template Name: Contac Us
-    *test
  */
 
  get_header() ?>

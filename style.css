@@ -14,7 +14,7 @@ Version: 1.0
 
   font-family:'Helvetica';
 
-  src: url(/wp-content/themes/e-world/assets/fonts/Helvetica.ttf);
+  src: url(/functions.php);
 
 }
 
@@ -22,7 +22,7 @@ Version: 1.0
 
   font-family:'HelveticaNowDisplay' ;
 
-  src: url(/wp-content/themes/e-world/assets/fonts/HelveticaNowDisplayXBlk.otf);
+  src: url(/eworld/wp-content/themes/e-world/assets/fonts/HelveticaNowDisplayXBlk.otf);
 
 }
 
@@ -962,7 +962,7 @@ textarea {
 
 #home_sec1{
 
-  background-image: url('/wp-content/themes/e-world/topBG.jpg');
+  background-image: url('/eworld/wp-content/themes/e-world/topBG.jpg');
 
   background-size: cover;
 

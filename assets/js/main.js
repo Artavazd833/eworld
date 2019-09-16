@@ -113,27 +113,31 @@ jQuery(function($){
 
 })
 
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+  
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+  
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+  
+  $(window).on('resize scroll', function(e) {
+    $('.sev').each(function() {
+      if ($(this).isInViewport()) {
+      $('.logo_wraper').addClass('spitak')
+      e.stopPropagation()
+      } else {
+        $('.logo_wraper').removeClass('spitak');
+      }
+    });
+  });
+
+
+
 // Slider
-        var lastScrollTop = 0;
-
-        window.addEventListener("scroll", function(){ 
-
-        var st = window.pageYOffset || document.documentElement.scrollTop; 
-
-        if (st > lastScrollTop){
-
-         
-        } else {
-
-        console.log('up')
-
-        }
-
-        lastScrollTop = st <= 0 ? 0 : st; 
-
-        }, false);
-
-
     'use strict';
     var defaults = {
         item: 3,
