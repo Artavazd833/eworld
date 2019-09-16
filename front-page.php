@@ -99,15 +99,7 @@
 
 
          <div class='sec2Img'>
-
-            <?php $image1 = get_field('section_2_image');
-
-               $size = 'full'; 
-
-               if( $image1 ) {echo wp_get_attachment_image( $image1, $size );}
-
-            ?>
-
+            <img src="<?php echo the_field('section_2_image');?>" >
          </div>
 
          <div class='sec2_right'>
@@ -225,52 +217,36 @@
 
 
    <section id="home_sec4">
-
             <div class='sec4_container'>
-
                   <div class='sec4_top'>
-
                      <div class='sec4_top_left'>
-
                         <div class='sec4_top_left_title title'><h2> <?php the_field('section_4_title'); ?> </h2></div>
-
                         <div class='sec4_top_left_text'> <?php the_field('section_4_text'); ?> </div>
-
                      </div>
-
                      <div class='sec4_top_right'>
-
                            <?php if( have_rows('sec4_slidr') ): 
-
                            while ( have_rows('sec4_slidr') ) : the_row();
-
                            ?>
-
                               <div class='hsec4_slidr_item'>
-
                                  <div class='hsec4_slidr_image'><img src="<?php echo  get_sub_field('sec4_slider_image');?>"/></div>
-
-                                 <div class='hsec4_slidr_logo'><img src="<?php echo  get_sub_field('sec4_slider_logo');?>"/></div>
-
                               </div>
-
-                           
-
                            <?php  endwhile;
-
                            endif; ?>
-
                      </div>
-
                   </div>
             </div>
-
             <div class='sec4_bottom'>
-
-                     <div class='hsec4_slidr_logo_holder'></div>
-
+                     <div class='hsec4_slidr_logo_holder'>
+                     <?php if( have_rows('sec4_slidr') ): 
+                        while ( have_rows('sec4_slidr') ) : the_row();
+                        ?>
+                        <div class='s4Slide_log'>
+                           <img src="<?php echo  get_sub_field('sec4_slider_logo');?>"/>
+                        </div>
+                     <?php  endwhile; 
+                     endif; ?>
+                     </div>
             </div>
-
    </section>
 
    <section id="home_sec5">
